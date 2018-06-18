@@ -19,4 +19,6 @@
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-4. go to url: http://localhost/phonebook/Phonebook-SQL
+4. go to url: http://localhost/Phonebook-SQL-master
+
+(or other if you renamed the folder)
