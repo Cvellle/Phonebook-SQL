@@ -7,7 +7,6 @@
    -Paste this in SQL to create table:
 
     CREATE TABLE `telephone_numbers` (
-
       `telephone_number_id` int(10) NOT NULL AUTO_INCREMENT,
       `first_name` varchar(255) NOT NULL,
       `last_name` varchar(255) NOT NULL,
