@@ -1,3 +1,7 @@
+body {
+  background:yellow;
+}
+
 .all {
   display:flex;
   flex-direction: column;
@@ -15,10 +19,13 @@ h2 {
   margin-left:auto;
   margin-right:auto;
   width:40%;
+  height: 10rem;
   display: -webkit-flex;
   flex-direction: column;
   border-radius: 1.5rem;
   border:0.5rem solid red;
+  justify-content: space-around;
+  font-weight: 600;
 }
 
 .submit {
@@ -28,8 +35,19 @@ h2 {
   right:0.5%;
   border-radius: 0.5rem;
   cursor: pointer;
-  border:0.3rem solid gray;;
+  border:0.3rem solid gray;
+  transition:0.1s;
 }
+
+.submit:focus {
+  outline:none;
+}
+
+.submit:active {
+  border-radius:0.3rem;
+  transition:0.1s;
+}
+
 
 #add_form > div {
   display: -webkit-flex;
@@ -50,6 +68,7 @@ h2 {
   margin-left: 4%;
   justify-content: right;
   width:30%;
+  transform: scaley(1.1);
   border-radius: 0.4rem;
   padding-left: 10px;
   border:none;
@@ -57,17 +76,17 @@ h2 {
 
 .search {
   position: absolute;
-  top:25%;
+  top:2%;
   right:1%;
   width:22.5%;
 }
 
 .search>div {
-  margin-top: 12%;
+  margin-top: -1%;
 }
-
-.search>div {
-  margin-top: 12%;
+.search>div>input {
+  border-radius: 0.4rem;
+  height:1.5rem;
 }
 
 table {
@@ -77,12 +96,17 @@ table {
 
 thead {
     margin-top:3%;
-    background: blue;
+    /* background: blue; */
 }
 
 th {
-  background: blue;
-  outline:0.2rem solid blue;
+  /* background: blue; */
+  /* outline:0.2rem solid blue; */
+  /* padding:2%; */
+  height:0.5rem;
+  /* width:7rem; */
+  border-radius: 0.4rem;
+  font-size: 100%;
 }
 
 .listdescr {
@@ -163,5 +187,17 @@ th {
   cursor: pointer;
   border: 0.3rem solid gray;
   border-radius: 1rem;
+}
+
+.delbtn:focus {
+  outline:none;
+}
+
+.pen {
+  position:absolute;
+  top:55%;
+  left:3%;
+  height:30%;
+  transform: rotate(-30deg);
 }
 
