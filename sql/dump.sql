@@ -1,10 +1,3 @@
-1. Download and unzip
-
-
-2. Paste folder in xxamp/htdocs root
-
-
-3. Paste this in phpMyAdmin to create table:
 
 /*!40000 DROP DATABASE IF EXISTS `phonebook`*/;
 
@@ -25,6 +18,3 @@ CREATE TABLE `telephone_numbers` (
   KEY `telephone_number` (`telephone_number`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
-
-4. go to url: http://localhost/phonebook/Phonebook-SQL

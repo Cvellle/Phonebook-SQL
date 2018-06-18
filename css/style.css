@@ -1,0 +1,167 @@
+.all {
+  display:flex;
+  flex-direction: column;
+  font-family: Arial;
+}
+
+h2 {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#add_form {
+  position: relative;
+  background: blue;
+  margin-left:auto;
+  margin-right:auto;
+  width:40%;
+  display: -webkit-flex;
+  flex-direction: column;
+  border-radius: 1.5rem;
+  border:0.5rem solid red;
+}
+
+.submit {
+  position: absolute; 
+  top: 50%;
+  -webkit-transform: translate(-80%, -50%);
+  right:0.5%;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border:0.3rem solid gray;;
+}
+
+#add_form > div {
+  display: -webkit-flex;
+  flex-direction: row;
+  margin-top:1%;
+}
+
+#add_form > div:nth-child(3) {
+  margin-bottom:1%;
+}
+
+#add_form > div> label {
+  width:30%;
+  margin-left:5%;
+}
+
+#add_form > div > input {
+  margin-left: 4%;
+  justify-content: right;
+  width:30%;
+  border-radius: 0.4rem;
+  padding-left: 10px;
+  border:none;
+}
+
+.search {
+  position: absolute;
+  top:25%;
+  right:1%;
+  width:22.5%;
+}
+
+.search>div {
+  margin-top: 12%;
+}
+
+.search>div {
+  margin-top: 12%;
+}
+
+table {
+  margin-top:3.5%;
+  padding: 1%;
+}
+
+thead {
+    margin-top:3%;
+    background: blue;
+}
+
+th {
+  background: blue;
+  outline:0.2rem solid blue;
+}
+
+.listdescr {
+  display: block;
+  margin: auto;
+  width:37%;
+  justify-content: space-between;
+}
+
+.listdescr>div {
+  margin-left:auto;
+  margin-right:auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+#output{
+  margin-left:auto;
+  margin-right:auto;
+  width:50%;
+  background:red;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2rem; 
+  border:0.7rem solid black;
+}
+
+.contactrow {
+  transform: translate(7%,0%);
+  display: flex;
+}
+
+.contact {
+  position: relative;
+  display:inline-flex;
+  justify-content: space-around;
+  width:85%;
+  margin-left: -2%;
+}
+
+.contactrow:first-child {
+  margin-top: 1%;
+}
+
+.contactrow:last-child {
+  margin-bottom: 1%;
+}
+
+.index {
+  transform: translate(-50%,0%);
+  position: absolute;
+  left:0%;
+}
+
+.fname {
+  position: absolute;
+  width:20%;
+  left: 10%;
+}
+
+.lname {
+  position: absolute;
+  width:20%;
+  left: 42.5%;
+}
+
+.phone {
+  position: relative;
+  width:20%;
+  left: 35.5%;
+}
+
+.delbtn {
+  position: absolute;
+  top:28%; 
+  align-items: center;
+  right:10%;
+  cursor: pointer;
+  border: 0.3rem solid gray;
+  border-radius: 1rem;
+}
+
