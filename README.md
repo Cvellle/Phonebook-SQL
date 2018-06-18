@@ -21,4 +21,4 @@
 
 4. go to url: http://localhost/Phonebook-SQL-master
 
-(or other if you renamed the folder)
+   (or other if you renamed the folder)
