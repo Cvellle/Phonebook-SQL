@@ -3,7 +3,7 @@
 
 2. Paste folder in xxamp/htdocs root
 
-
+Go to http://localhost/phpmyadmin/db_sql.php?db=phonebook
 3. Paste this in phpMyAdmin to create table:
 
 CREATE TABLE `telephone_numbers` (
