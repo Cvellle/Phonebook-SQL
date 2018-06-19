@@ -3,7 +3,7 @@ body {
 }
 
 .all {
-  display:flex;
+  display:-webkit-flex;
   flex-direction: column;
   font-family: Arial;
 }
@@ -74,7 +74,7 @@ h1 {
   margin-left: 4%;
   justify-content: right;
   width:30%;
-  transform: scaley(1.1);
+  -webkit-transform: scaley(1.1);
   border-radius: 0.4rem;
   padding-left: 10px;
   border:none;
@@ -82,7 +82,7 @@ h1 {
 
 .search {
   position: absolute;
-  top:11%;
+  top:9%;
   right:1%;
   width:22.5%;
 }
@@ -96,7 +96,7 @@ h1 {
   height:1.5rem;
   padding: 5px;
   border:5px solid black;
-  margin-left:15%;
+  margin-left:0%;
 }
 
 table {
@@ -165,7 +165,7 @@ td:nth-child(3) {
 .listdescr>div {
   margin-left:auto;
   margin-right:auto;
-  display: flex;
+  display: -webkit-flex;
   justify-content: space-between;
 }
 
@@ -184,7 +184,7 @@ td:nth-child(3) {
   margin-right:auto;
   width:50%;
   background:rgb(253, 241, 63);
-  display: flex;
+  display: -webkit-flex;
   flex-direction: column;
   border-radius: 2rem; 
   border:0.55rem solid rgb(253, 202, 63);
@@ -193,8 +193,8 @@ td:nth-child(3) {
 }
 
 .contactrow {
-  transform: translate(7%,0%);
-  display: flex;
+  -webkit-transform: translate(7%,0%);
+  display: -webkit-flex;
 }
 
 .contact {
@@ -214,7 +214,7 @@ td:nth-child(3) {
 }
 
 .index {
-  transform: translate(-50%,0%);
+  -webkit-transform: translate(-50%,0%);
   position: absolute;
   left:0%;
 }
@@ -257,10 +257,70 @@ td:nth-child(3) {
   top:66%;
   left:7%;
   height:25%;
-  /* transform: rotate(-30deg); */
+  opacity: 0.8;
 }
 
-.searchimg {
-  position: absolute; 
-  height:20%;
+.hang {
+  position: absolute;
+  top:-3%;
+  left:5%;
+  height:35%;
+  -webkit-transform: rotate(180deg);
 }
+
+
+
+
+@media only screen and (max-width: 1024px) {
+
+h2 {
+  font-size: 1.3rem;
+}
+
+#add_form {
+  width:90%;
+  -webkit-transform: translateX(0%);
+}
+
+.submit{
+  -webkit-transform: translateY(-50%) translateX(-10%);
+}
+
+
+.listdescr {
+  -webkit-transform: translatey(-40%) translateX(-40%);
+  font-size: 0.8rem;
+}
+
+#output {
+  width:60%;
+  -webkit-transform: translate(-20%, -120%);
+}
+
+.search {
+  top:18.7rem;
+  right:-4%;
+  -webkit-transform: scale(0.4) translateX(-150%);
+
+}
+
+.pen {
+  display:none;
+}
+
+th {
+  display:none;
+}
+	
+}
+
+
+
+@media only screen and (max-width: 414px) {
+
+  #add_form {
+    font-size: 0.75rem;
+  }
+
+}
+	

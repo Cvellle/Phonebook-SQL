@@ -116,41 +116,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
 
-
+    
     //CALLING OUTPUT
 
     contactsOutput();
 
-
-
-
-        // function  deleteTelephoneNumber(id)
-        // {
-        //    alert("s")
-    
-        // //    fetch(
-        // //     `php/put.php?id=${id}`,
-        // //         {
-        // //         method:'put'
-        // //         }
-        // //     )
-
-        // }
-
-
-
-        //deleteTelephoneNumber();
-
-
-     //del.addEventListener('click', deleteTelephoneNumber);
- 
-    //  function attachClickToDeleteButton() {
-    //      if(e.target && e.target.classList.contains('js_delete_telephone_number')){
-    //          deleteTelephoneNumber(e.target.dataset.id);
-    //      }
-    //     }
-
-    // document.addEventListener('click', attachClickToDeleteButton);
  
 
 });
