@@ -19,6 +19,8 @@
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-4. go to url: http://localhost/Phonebook-SQL-master
+4. Open XXAMP Control Panel, start Apache and MySQL
+
+5. Go to url: http://localhost/Phonebook-SQL-master
 
    (or other if you renamed the folder)
