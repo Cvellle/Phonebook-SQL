@@ -80,15 +80,23 @@ h1 {
   border:none;
 }
 
+.searchdiv {
+
+}
+
 .search {
-  position: absolute;
-  top:9%;
+  /* position: relative;  */
+  /* top:9%;
   right:1%;
-  width:22.5%;
+  width:22.5%; */
+  margin: auto;
 }
 
 .search>div {
   margin-top: -1%;
+  margin-right: 2px;
+  margin: auto;
+  display: -webkit-flex;
 }
 
 .search>div>input {
@@ -96,7 +104,7 @@ h1 {
   height:1.5rem;
   padding: 5px;
   border:5px solid black;
-  margin-left:0%;
+  margin:auto;
 }
 
 table {
@@ -254,18 +262,37 @@ td:nth-child(3) {
 
 .pen {
   position:absolute;
-  top:66%;
-  left:7%;
-  height:25%;
+  bottom:10%;
+  left:10%;
+  height:20%;
   opacity: 0.8;
 }
 
 .hang {
   position: absolute;
   top:-3%;
-  left:5%;
+  right:7.5%;
   height:35%;
   -webkit-transform: rotate(180deg);
+  opacity: 0.8;
+}
+
+#numbers_list {
+  justify-content: center;
+  width:50%;
+  display: block;
+}
+
+#numbers_list>li {
+  margin-left: 0%;
+}
+
+.searchdiv {
+  display: block;
+}
+
+.searchtitle {
+  text-align: center;
 }
 
 
@@ -293,18 +320,31 @@ h2 {
 }
 
 #output {
-  width:60%;
-  -webkit-transform: translate(-20%, -120%);
+  width:95%;
+  -webkit-transform: translate(0%, 0%);
+}
+
+#numbers_list {
+  width:95%;
+  -webkit-transform: translate(0%, 0%);
+}
+
+.listdescr {
+  display: none;
 }
 
 .search {
   top:18.7rem;
   right:-4%;
-  -webkit-transform: scale(0.4) translateX(-150%);
+  /* -webkit-transform: scale(0.4) translateX(-150%); */
 
 }
 
 .pen {
+  display:none;
+}
+
+.hang {
   display:none;
 }
 
