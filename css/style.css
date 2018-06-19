@@ -1,5 +1,5 @@
 body {
-  background:yellow;
+  background:rgb(255, 218, 5);
 }
 
 .all {
@@ -8,14 +8,18 @@ body {
   font-family: Arial;
 }
 
-h2 {
+h2, h1 {
   margin-left:auto;
   margin-right:auto;
 }
 
+h1 {
+  margin-bottom:0%;
+}
+
 #add_form {
   position: relative;
-  background: blue;
+  background: rgb(233, 128, 42);
   margin-left:auto;
   margin-right:auto;
   width:40%;
@@ -23,9 +27,10 @@ h2 {
   display: -webkit-flex;
   flex-direction: column;
   border-radius: 1.5rem;
-  border:0.5rem solid red;
+  border:0.5rem solid rgb(153, 83, 3);
   justify-content: space-around;
   font-weight: 600;
+  margin-bottom: 0%;
 }
 
 .submit {
@@ -35,7 +40,8 @@ h2 {
   right:0.5%;
   border-radius: 0.5rem;
   cursor: pointer;
-  border:0.3rem solid gray;
+  background: rgb(223, 164, 55);
+  border:0.3rem solid rgb(226, 97, 22);
   transition:0.1s;
 }
 
@@ -76,7 +82,7 @@ h2 {
 
 .search {
   position: absolute;
-  top:2%;
+  top:11%;
   right:1%;
   width:22.5%;
 }
@@ -84,29 +90,67 @@ h2 {
 .search>div {
   margin-top: -1%;
 }
+
 .search>div>input {
-  border-radius: 0.4rem;
+  border-radius: 0.8rem;
   height:1.5rem;
+  padding: 5px;
+  border:5px solid black;
+  margin-left:15%;
 }
 
 table {
   margin-top:3.5%;
-  padding: 1%;
+  /* padding: 1%; */
 }
 
 thead {
     margin-top:3%;
+    padding: 2rem;
     /* background: blue; */
 }
 
+thead>tr {
+
+}
+
 th {
-  /* background: blue; */
-  /* outline:0.2rem solid blue; */
-  /* padding:2%; */
   height:0.5rem;
-  /* width:7rem; */
+  justify-content: space-around;
   border-radius: 0.4rem;
-  font-size: 100%;
+  font-size: 95%;
+}
+
+th:nth-child(2) {
+  position:absolute;
+  left:35%;
+}
+
+th:nth-child(3) {
+  position:absolute;
+  left:69%;
+}
+
+tbody {
+  width:20rem;
+}
+
+tr {
+  margin-top:10%;
+}
+
+input:focus {
+  outline:none;
+}
+
+td:nth-child(2) {
+  position:absolute;
+  left:35%;
+}
+
+td:nth-child(3) {
+  position:absolute;
+  left:69%;
 }
 
 .listdescr {
@@ -114,6 +158,8 @@ th {
   margin: auto;
   width:37%;
   justify-content: space-between;
+  margin-top: -1%;
+  font-weight: 600;
 }
 
 .listdescr>div {
@@ -123,15 +169,27 @@ th {
   justify-content: space-between;
 }
 
+.listdescr>div>p:nth-child(2) {
+  position: relative;
+  left:2%;
+}
+
+.listdescr>div>p:nth-child(3) {
+  position: relative;
+  left:5%;
+}
+
 #output{
   margin-left:auto;
   margin-right:auto;
   width:50%;
-  background:red;
+  background:rgb(253, 241, 63);
   display: flex;
   flex-direction: column;
   border-radius: 2rem; 
-  border:0.7rem solid black;
+  border:0.55rem solid rgb(253, 202, 63);
+  /* font-weight: 600; */
+  font-size: 105%;
 }
 
 .contactrow {
@@ -185,7 +243,8 @@ th {
   align-items: center;
   right:10%;
   cursor: pointer;
-  border: 0.3rem solid gray;
+  background:rgb(255, 222, 34);
+  border: 0.3rem solid rgb(223, 172, 35);
   border-radius: 1rem;
 }
 
@@ -195,9 +254,13 @@ th {
 
 .pen {
   position:absolute;
-  top:55%;
-  left:3%;
-  height:30%;
-  transform: rotate(-30deg);
+  top:66%;
+  left:7%;
+  height:25%;
+  /* transform: rotate(-30deg); */
 }
 
+.searchimg {
+  position: absolute; 
+  height:20%;
+}
