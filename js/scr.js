@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         fetch('php/data.php')
               .then(response => response.json())
               .then(telephone => {
-                const sorted = telephone.sort((a,b) => a.first_name > b.last_name ? 1 : -1);
+                const sorted = telephone.sort((a,b) => a.first_name > b.first_name ? 1 : -1);
                 document.querySelector("#output").innerHTML = sorted.map((cont,i) => {  
 
                     return `<div data-value="${cont.telephone_number_id}" class="contactrow">
