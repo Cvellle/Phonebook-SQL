@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         fetch('php/data.php')
               .then(response => response.json())
               .then(telephone => {
-                const sorted = telephone.sort((a,b) => a.first_name > b.last_name ? 1 : -1);
+                const sorted = telephone.sort((a,b) => a.first_name > b.first_name ? 1 : -1);
                 document.querySelector("#output").innerHTML = sorted.map((cont,i) => {  
 
                     return `<div data-value="${cont.telephone_number_id}" class="contactrow">
@@ -58,16 +58,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
     
         document.querySelector("#numbers_list").innerHTML = "";
     
-        telephoneNumbers.map((contact) => {
+        telephoneNumbers.map((cont,i) => {
                   
             let row = `
-                <tr>
-                    <td>${contact.first_name}</td>
-                    <td>${contact.last_name}</td>
-                    <td>${contact.telephone_number}</td>
-                </tr>
+                <div data-value="${cont.telephone_number_id}" class="contactrow">
+                                <p class="index">${i+1}.</p>
+                                <div class="contact">
+                                    <p class="fname">${cont.first_name}</p>
+                                    <p class="lname">${cont.last_name}</p>
+                                    <p class="phone">${cont.telephone_number}</p>
+                                </div>
+                                <button id="del" type="button" class="delbtn">Delete</button>
+                           
+                            </div>
             `;
     
+
             if (search.value.length<1) {
     
                 return document.querySelector("#numbers_list").innerHTML = "";
@@ -107,8 +113,28 @@ document.addEventListener("DOMContentLoaded", function(event) {
             var vars = {
                 uid: uid
             };
+
+
             $.post('php/delete.php', vars, function (data) {
                 contactsOutput();
+                console.log(this);
+            })
+
+    })
+
+
+    $('#numbers_list').on('click', 'button', function () {
+        var uid = $(this).parent().attr('data-value');
+     
+            var vars = {
+                uid: uid
+            };
+
+            $(this).parent().hide();
+
+            $.post('php/delete.php', vars, function (data) {
+                contactsOutput();
+                console.log(this);
             })
 
     })
