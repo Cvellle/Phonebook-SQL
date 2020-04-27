@@ -5,7 +5,6 @@
     $password = "";
     $databaseName = "phonebook";
 
-
     try {
         $search = filter_var($_GET['search'], FILTER_SANITIZE_STRING);
         $conn = new PDO("mysql:host=$servername;dbname=$databaseName", $username, $password);
@@ -18,4 +17,5 @@
     catch(PDOException $e){
         throw new \Exception('Missing telephone_numbers', 400);
     }
+    
 ?>

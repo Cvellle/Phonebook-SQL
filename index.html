@@ -1,75 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Phonebook</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
 
-<head>
-
-  <title>Phonebook</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-</head>
-
-<body>
-
-  <div class="all">
-    <h1>Phonebook</h1>
-    <h2>Add new phone</h2>
-
-    <form action="javascript:void(0)" id="add_form">
-
-      <div class="form-group">
-        <label for="first_name">First Name:</label>
-        <input required type="text" class="inp" id="first_name" placeholder="Enter First Name" name="first_name">
-      </div>
-      <div class="form-group">
-        <label for="last_name">Last Name:</label>
-        <input required type="text" class="inp" id="last_name" placeholder="Enter Last Name" name="last_name">
-      </div>
-      <div class="form-group">
-        <label for="telephone_number">Telephone Number:</label>
-        <input required type="text" class="inp" id="telephone_number" placeholder="Enter Telephone Number" name="telephone_number">
-      </div>
-      <button type="submit" id="add" class="submit">Submit</button>
-
-    </form>
-
-    <div class="searchdiv">
-
-        <div class="search">
-
-            <h2 class="searchtitle">Search by last name</h2> 
-            
-            <div class="input-group">
-                <input id="search" type="text" class="form-control" placeholder="Search for...">
-            </div>
-      
-            <div id="numbers_list">
-            </div>
-     
+  <body>
+    <div class="all">
+      <h1>Phonebook</h1>
+      <h2>Add new phone</h2>
+      <form action="javascript:void(0)" id="add_form">
+        <div class="form-group">
+          <label for="first_name">First Name:</label>
+          <input
+            required
+            type="text"
+            class="inp"
+            id="first_name"
+            placeholder="Enter First Name"
+            name="first_name"
+          />
         </div>
-
-    </div>
-
-    <h2>Telephone Numbers</h2>    
-
-    <div class="listdescr">
+        <div class="form-group">
+          <label for="last_name">Last Name:</label>
+          <input
+            required
+            type="text"
+            class="inp"
+            id="last_name"
+            placeholder="Enter Last Name"
+            name="last_name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="telephone_number">Telephone Number:</label>
+          <input
+            required
+            type="text"
+            class="inp"
+            id="telephone_number"
+            placeholder="Enter Telephone Number"
+            name="telephone_number"
+          />
+        </div>
+        <button type="submit" id="add" class="submit">Submit</button>
+      </form>
+      <div class="searchdiv">
+        <div class="search">
+          <h2 class="searchtitle">Search by last name</h2>
+          <div class="input-group">
+            <input
+              id="search"
+              type="text"
+              class="form-control"
+              placeholder="Search for..."
+            />
+          </div>
+          <div id="numbers_list"></div>
+        </div>
+      </div>
+      <h2>Telephone Numbers</h2>
+      <div class="listdescr">
         <p>First Name</p>
         <p>Last Name</p>
         <p>Telephone Number</p>
+      </div>
+      <div id="output"></div>
     </div>
+    <img class="pen" src="images/pen5.png" />
+    <img class="hang" src="images/hang.png" />
 
-    <div id="output">
-      
-    </div>
-
-  </div>
-
-<img class="pen" src="images/pen5.png">
-<img class="hang" src="images/hang.png">
-
-<script src="js/script.js"></script>
-</body>
-
+    <script src="js/script.js"></script>
+  </body>
 </html>
