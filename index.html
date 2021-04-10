@@ -1,78 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Phonebook</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  </head>
 
-  <body>
-    <div class="all">
-      <h1>Phonebook</h1>
-      <h2>Add new phone</h2>
-      <form action="javascript:void(0)" id="add_form">
-        <div class="form-group">
-          <label for="first_name">First Name:</label>
-          <input
-            required
-            type="text"
-            class="inp"
-            id="first_name"
-            placeholder="Enter First Name"
-            name="first_name"
-          />
-        </div>
-        <div class="form-group">
-          <label for="last_name">Last Name:</label>
-          <input
-            required
-            type="text"
-            class="inp"
-            id="last_name"
-            placeholder="Enter Last Name"
-            name="last_name"
-          />
-        </div>
-        <div class="form-group">
-          <label for="telephone_number">Telephone Number:</label>
-          <input
-            required
-            type="text"
-            class="inp"
-            id="telephone_number"
-            placeholder="Enter Telephone Number"
-            name="telephone_number"
-          />
-        </div>
-        <button type="submit" id="add" class="submit">Submit</button>
-      </form>
-      <div class="searchdiv">
-        <div class="search">
-          <h2 class="searchtitle">Search by last name</h2>
-          <div class="input-group">
-            <input
-              id="search"
-              type="text"
-              class="form-control"
-              placeholder="Search for..."
-            />
+<head>
+  <title>Ajax task</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="container">
+      <form class="needs-validation formEl" id="formEl" novalidate>
+        <div class="form-row d-flex justify-content-center d-flex justify-content-center">
+          <div class="col-md-6 mb-3">
+            <label for="validationCustom01">First name</label>
+            <input type="text" data-condition="^[a-zA-Z\s]+$" class="form-control validationCheck"
+              id="validationCustom01" placeholder="First name" required>
+            <div class="invalid-feedback">
+              You must provide a valid first name with letters only
+            </div>
           </div>
-          <div id="numbers_list"></div>
         </div>
-      </div>
-      <h2>Telephone Numbers</h2>
-      <div class="listdescr">
-        <p>First Name</p>
-        <p>Last Name</p>
-        <p>Telephone Number</p>
-      </div>
-      <div id="output"></div>
+        <div class="form-row d-flex justify-content-center">
+          <div class="col-md-6 mb-3">
+            <label for="validationCustom02">Last name</label>
+            <input type="text" data-condition="^[a-zA-Z\s]+$" class="form-control validationCheck"
+              id="validationCustom02" placeholder="Last name" required>
+            <div class="invalid-feedback">
+              You must provide a valid last name with letters only
+            </div>
+          </div>
+        </div>
+        <div class="form-row d-flex justify-content-center">
+          <div class="col-md-6 mb-3">
+            <span>Gender</span>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input radio-input" id="customControlValidation2"
+                name="radio-stacked" required>
+              <label class="custom-control-label" for="customControlValidation2">Male</label>
+            </div>
+            <div class="custom-control custom-radio mb-3">
+              <input type="radio" class="custom-control-input radio-input" id="customControlValidation3"
+                name="radio-stacked" required>
+              <label class="custom-control-label" for="customControlValidation3">Female</label>
+            </div>
+            <div class="is-invalid validationCheck"></div>
+            <div class="invalid-feedback">You must click select a gender</div>
+          </div>
+        </div>
+        <div class="form-row d-flex justify-content-center">
+          <div class="col-md-6 mb-3">
+            <label for="selectField">Year of birth</label>
+            <select class="form-control validationCheck custom-select selectYear" id="selectField" required>
+              <option value="">Choose...</option>
+            </select>
+            <div class="invalid-feedback">Please choose your year of birth</div>
+          </div>
+        </div>
+        <div class="form-row d-flex justify-content-center">
+          <div class="col-md-6 mb-3">
+            <label for="validationTextarea">Adress</label>
+            <textarea data-condition="^[a-zA-Z\s]+[\s]+[0-9]" class="form-control validationCheck"
+              id="validationTextarea" placeholder="Street name and a number" required></textarea>
+            <div class="invalid-feedback">
+              Please provide a valid address with a name and a number
+            </div>
+          </div>
+        </div>
+        <div class="form-row d-flex justify-content-center">
+          <div class="col-md-6 mb-3">
+            <label for="validationCustom04">City</label>
+            <input type="text" data-condition="^[a-zA-Z\s]+$" class="form-control validationCheck"
+              id="validationCustom04" placeholder="City" required>
+            <div class="invalid-feedback">
+              You must provide a valid city with letters only
+            </div>
+          </div>
+        </div>
+        <div class="form-group d-flex justify-content-center">
+          <div class="form-check">
+            <input class="form-check-input validationCheck" type="checkbox" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+              Agree to terms and conditions
+            </label>
+            <div class="invalid-feedback">
+              You must agree before submitting.
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-primary d-flex mx-auto submitBtn" type="submit" disabled="true">Submit form</button>
+      </form>
     </div>
-    <img class="pen" src="images/pen5.png" />
-    <img class="hang" src="images/hang.png" />
+  </div>
 
-    <script src="js/script.js"></script>
-  </body>
+  <script src="js/validation.js"></script>
+  <script src="js/submitForm.js"></script>
+</body>
+
 </html>
